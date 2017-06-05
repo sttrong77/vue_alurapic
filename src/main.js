@@ -8,7 +8,15 @@ import {routes} from './routes';
 import VeeValidate from 'vee-validate';
 import msg from './pt_BR';
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 import './directives/Transform';
+
+import './assets/css/teste.css';
+import './assets/js/teste.js';
+
+import 'jquery/dist/jquery.js'
+import 'bootstrap/dist/js/bootstrap.js';
 
 // registrando o módulo/plugin no global view object
 Vue.use(VueResource);
