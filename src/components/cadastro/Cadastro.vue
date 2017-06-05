@@ -50,7 +50,8 @@ export default {
   data(){
 
     return{
-        foto: new Foto()
+        foto: new Foto(),
+        id: this.$route.params.id //pega param id
     }
   },
 
@@ -64,6 +65,12 @@ export default {
 
   created(){
     this.service = new FotoService(this.$resource);
+
+    if(this.id){
+      this.service
+        .busca(this.id)
+        .then(foto => this.foto = foto);
+    }
   }
 
 }
