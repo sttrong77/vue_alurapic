@@ -5,6 +5,8 @@ import App from './App.vue'
 import VueResource from 'vue-resource';
 import VueRouter from 'vue-router';
 import {routes} from './routes';
+import VeeValidate from 'vee-validate';
+import msg from './pt_BR';
 
 import './directives/Transform';
 
@@ -17,6 +19,16 @@ const router = new VueRouter({
   routes,
   mode: 'history' 
 });
+
+Vue.use(VeeValidate, {
+  locale: 'pt_BR', //colocar traducao nas validações
+  dictionary: {
+    pt_BR: {
+      messages: msg
+    }
+  }
+});
+
 
 new Vue({
   el: '#app',
